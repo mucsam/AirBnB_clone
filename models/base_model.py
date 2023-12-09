@@ -50,10 +50,11 @@ class BaseModel:
         of __dict__ of the instance
         """
 
+        our_dict = {}
         createdTime = self.created_at.isoformat()
         updatedTime = self.updated_at.isoformat()
         class_name = self.__class__.__name__
-        our_dict = self.__dict__
+        our_dict.update(self.__dict__)
         our_dict["__class__"] = class_name
         our_dict["created_at"] = createdTime
         our_dict["updated_at"] = updatedTime
