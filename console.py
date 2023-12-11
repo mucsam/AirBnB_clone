@@ -46,7 +46,7 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("** class name missing **")
             return
-        
+
         class_name = globals().get(arg)
         if class_name:
             new_inst = class_name()
@@ -56,8 +56,8 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_show(self, arg):
-        """Prints the string representation of an instance based on the class name
-        and id
+        """Prints the string representation of an instance based on the class
+        me and id
         """
 
         if not arg:
@@ -91,7 +91,7 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("** class name missing **")
             return
-        
+
         arg_list = arg.split(' ')
         class_name = arg_list[0]
         class_obj = globals().get(class_name)
@@ -178,6 +178,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
         else:
             print("** class doesn't exist **")
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
