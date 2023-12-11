@@ -3,7 +3,7 @@
 import cmd
 from models.base_model import BaseModel
 from models.__init__ import storage
-
+from models.user import User
 
 class HBNBCommand(cmd.Cmd):
     """Class for the AirBnB clone console"""
